@@ -23,7 +23,7 @@ stop_words = set(stopwords.words('english'))
 punc_tokenizer = nltk.RegexpTokenizer(r"\w+")
 for i in range(query.size) :
     word_tokens = word_tokenize(query[i])
-    removed_stopwords = [w for w in word_tokens if not w.lower() in stop_words]
+    removed_stopwords = [w for w in word_tokens if not w.lower() in stop_words] # Removing all the stopwords in the queries
     sent_removed = ' '.join(removed_stopwords)
     only_words = punc_tokenizer.tokenize(sent_removed)
     lemmatized_output = ' '.join([lemmatizer.lemmatize(w) for w in only_words])
