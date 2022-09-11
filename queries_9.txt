@@ -1,0 +1,40 @@
+0, coronavirus origin
+1, coronavirus response weather change
+2, coronavirus immunity
+3, people die coronavirus
+4, animal model COVID 19
+5, coronavirus test rapid testing
+6, serological test coronavirus
+7, coronavirus reporting
+8, coronavirus Canada
+9, coronavirus social distancing impact
+10, coronavirus hospital rationing
+11, coronavirus quarantine
+12, coronavirus spread
+13, coronavirus super spreader
+14, coronavirus outside body
+15, long coronavirus survive surface
+16, coronavirus clinical trial
+17, mask prevent coronavirus
+18, alcohol sanitizer kill coronavirus
+19, coronavirus ACE inhibitor
+20, coronavirus mortality
+21, coronavirus heart impact
+22, coronavirus hypertension
+23, coronavirus diabetes
+24, coronavirus biomarkers
+25, coronavirus early symptom
+26, coronavirus asymptomatic
+27, coronavirus hydroxychloroquine
+28, coronavirus drug repurposing
+29, coronavirus remdesivir
+30, difference coronavirus flu
+31, coronavirus subtypes
+32, coronavirus vaccine candidate
+33, coronavirus recovery
+34, coronavirus public datasets
+35, SARS CoV 2 spike structure
+36, SARS CoV 2 phylogenetic analysis
+37, COVID inflammatory response
+38, COVID 19 cytokine storm
+39, coronavirus mutation
