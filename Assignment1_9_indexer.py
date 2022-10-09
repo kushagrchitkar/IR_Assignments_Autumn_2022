@@ -2,6 +2,7 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
+from collections import OrderedDict
 
 nltk.download("wordnet")
 nltk.download("omw-1.4")
@@ -29,7 +30,6 @@ raw_dict = dict()
 for filename in json_files:
     with open(path_to_json + "/" + filename, "r") as f:
         data = json.load(f)
-        print(filename)
         for row in data["abstract"]:
             if data["paper_id"] in raw_dict:
                 raw_dict[data["paper_id"]] += row["text"] + " "
@@ -48,7 +48,10 @@ idmap = pd.read_csv("./Data/id_mapping.csv")
 for index, row in idmap.iterrows():
     cord_to_paperId[row["cord_id"]] = row["paper_id"]
     paper_to_cordId[row["paper_id"]] = row["cord_id"]
-    corpus[row["cord_id"]] = raw_dict[row["paper_id"]]
+    if row["cord_id"] not in corpus:
+        corpus[row["cord_id"]] = raw_dict[row["paper_id"]]
+    else:
+        corpus[row["cord_id"]] = corpus[row["cord_id"]]+" "+raw_dict[row["paper_id"]]
 
 # preprocessing
 processed_corpus = dict()
@@ -74,6 +77,12 @@ for doc in processed_corpus:
             else:
                 inverted_index[word] = [doc]
         unique_words.add(word)
+
+
+
+inverted_index = OrderedDict(sorted(inverted_index.items()))
+for keys in inverted_index:
+    inverted_index[keys].sort()
 
 # convert the dictionary to pickle
 pick_path = "./model_queries_9.bin"
