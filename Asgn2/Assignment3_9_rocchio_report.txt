@@ -1,0 +1,21 @@
+For the weighting scheme (lnc.ltc), we got the following evaluation metrics using normal TF-IDF vectors - 
+Mean Average Precision (MAP@20) : 0.25444299128910386
+Average NDCG (averNDCG@20) : 0.36705015564685495
+
+And using Relevance feedback, we got the following results : 
+
+Index	alpha	beta	gamma	NDCG@20		mAP@20
+0	1	0.5	0.5	0.399558995964981	0.247805274952071
+1	0.5	0.5	0.5	0.376790391893434	0.228372859945098
+2	1	0.5	0	0.414518276648094	0.268635375144073
+
+and Pseudo Relevance Feedback gives the following results : 
+
+Index	alpha	beta	gamma	NDCG@20		mAP@20
+0	1	0.5	0.5	0.385233983716428	0.232419138861532
+1	0.5	0.5	0.5	0.356448214906964	0.207714495075797
+2	1	0.5	0	0.385233983716428	0.232419138861532
+
+From here, we can clearly see that the average NDCG@20 scores have improved significantly in case of using the rocchio's algorithm to modify the query vectors. The map scores have not improved but deteriorated a little bit. 
+
+Comparing RF and PsRF, we can see that the scores for RF are better than Pseudo Relevance feedback, because it brings the query results more closer to the gold standard documents thereby improving the NDCG and mAP scores, while PsRF only increases the relevance of top documents fetched in the original ranking.
