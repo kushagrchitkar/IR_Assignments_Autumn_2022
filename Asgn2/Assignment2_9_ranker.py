@@ -97,7 +97,7 @@ gc.collect()
 DocumentFrequency = dict()
 
 for keys in InvertedIndex:
-  if(len(InvertedIndex[keys])>7):
+  if(len(InvertedIndex[keys])>2):
     DocumentFrequency[keys] = len(InvertedIndex[keys])
   
 
