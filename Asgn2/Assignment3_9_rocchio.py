@@ -395,7 +395,7 @@ for i in range(len(alphas)):
     print(alphas[i], ',', betas[i], ',', gammas[i], ncdg20, map20)
 output_to_csv = output_to_csv.reshape(len(alphas), 5)
 pd.DataFrame(output_to_csv).to_csv('Assignment3_9_rocchio_RF_metrics.csv',
-                                   index_label="Index", header=['alpha', 'beta', 'gamma', 'mAP@20', 'NDCG@20'])
+                                   index_label="Index", header=['alpha', 'beta', 'gamma', 'NDCG@20', 'mAP@20'])
 
 print("Relevance Feedback Done")
 
@@ -439,6 +439,6 @@ for i in range(len(alphas)):
     print(alphas[i], ',', betas[i], ',', gammas[i], ncdg20, map20)
 output_to_csv = output_to_csv.reshape(len(alphas), 5)
 pd.DataFrame(output_to_csv).to_csv('Assignment3_9_rocchio_PsRF_metrics.csv',
-                                   index_label="Index", header=['alpha', 'beta', 'gamma', 'mAP@20', 'NDCG@20'])
+                                   index_label="Index", header=['alpha', 'beta', 'gamma', 'NDCG@20', 'mAP@20'])
 
 print("Pseudo Relevance Feedback Done")
