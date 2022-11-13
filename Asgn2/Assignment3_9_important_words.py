@@ -102,7 +102,7 @@ for keys in InvertedIndex:
 
 print("DF Done!")
 
-TermFrequency = defaultdict(dict)  #finding TF part  #defaultdict allows for 2d (or 3d or wtv)keys 
+TermFrequency = defaultdict(dict)  #finding TF part   
 
 for doc in processed_corpus:
     for word in processed_corpus[doc].split(" "):
